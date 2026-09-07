@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>Notícias Agora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="utility-bar">
+      <div class="shell utility-inner">
+        <span>Brasil</span>
+        <span class="market-clock">Mercados & notícias</span>
+        <button id="theme" class="icon-btn" aria-label="Alternar tema">☾</button>
+      </div>
+    </div>
+
+    <div class="shell brand-row">
+      <div class="brand-wrap">
+        <div class="brand-mark">NA</div>
+        <div>
+          <div class="brand">Notícias <b>Agora</b></div>
+          <div class="brand-sub">mercados • economia • mundo</div>
+        </div>
+      </div>
+      <div class="desktop-search search">
+        <span>⌕</span>
+        <input id="searchDesktop" placeholder="Buscar notícias, empresas e temas..." autocomplete="off">
+      </div>
+    </div>
+
+    <div class="nav-line">
+      <div class="shell main-nav">
+        <button data-cat="Todas" class="nav-link active">Início</button>
+        <button data-cat="Economia" class="nav-link">Mercados</button>
+        <button data-cat="Brasil" class="nav-link">Brasil</button>
+        <button data-cat="Mundo" class="nav-link">Mundo</button>
+        <button data-cat="Tecnologia" class="nav-link">Tecnologia</button>
+        <button data-cat="Esportes" class="nav-link">Esportes</button>
+      </div>
+    </div>
+
+    <div class="market-strip-wrap">
+      <div class="shell market-strip" aria-label="Painel de mercados">
+        <div class="market-item"><small>IBOVESPA</small><strong>—</strong><span>cotação em integração</span></div>
+        <div class="market-item"><small>DÓLAR</small><strong>—</strong><span>cotação em integração</span></div>
+        <div class="market-item"><small>S&amp;P 500</small><strong>—</strong><span>cotação em integração</span></div>
+        <div class="market-item"><small>BITCOIN</small><strong>—</strong><span>cotação em integração</span></div>
+      </div>
+    </div>
+
+    <div class="shell mobile-search search">
+      <span>⌕</span>
+      <input id="search" placeholder="Buscar notícias..." autocomplete="off">
+    </div>
+    <div id="cats" class="shell cats"></div>
+  </header>
+
+  <main class="shell page-grid">
+    <section class="content-column">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow">Notícias</span>
+          <h1 id="pageTitle">Principais notícias</h1>
+        </div>
+        <div class="status"><span id="updatedText">ATUALIZANDO...</span><button id="refresh" title="Atualizar">↻</button></div>
+      </div>
+
+      <section id="lead"></section>
+
+      <div class="section-head">
+        <h2>Últimas notícias</h2>
+        <span id="resultCount"></span>
+      </div>
+      <div id="grid" class="news-list"></div>
+    </section>
+
+    <aside class="sidebar">
+      <section class="side-card">
+        <div class="side-title">Acompanhe os mercados</div>
+        <button class="side-row" data-cat="Economia"><span>Economia</span><b>→</b></button>
+        <button class="side-row" data-cat="Mundo"><span>Mercados globais</span><b>→</b></button>
+        <button class="side-row" data-cat="Tecnologia"><span>Tecnologia</span><b>→</b></button>
+      </section>
+
+      <section class="side-card">
+        <div class="side-title">Mais recentes</div>
+        <div id="latestMini" class="mini-list"></div>
+      </section>
+
+      <section class="side-card favorites-card">
+        <div class="side-title">Favoritos</div>
+        <p>Salve matérias para ler depois neste dispositivo.</p>
+        <button id="showFavs" class="primary-action">Ver favoritos</button>
+      </section>
+    </aside>
+  </main>
+
+  <nav class="bottom">
+    <button data-cat="Todas">⌂<small>Início</small></button>
+    <button data-cat="Economia">▥<small>Mercados</small></button>
+    <button data-cat="Brasil">◉<small>Brasil</small></button>
+    <button id="fav">☆<small>Favoritos</small></button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
